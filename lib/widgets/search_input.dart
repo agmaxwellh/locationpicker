@@ -15,7 +15,7 @@ class SearchInput extends StatefulWidget {
 class SearchInputState extends State<SearchInput> {
   TextEditingController editController = TextEditingController();
 
-  Timer debouncer;
+  Timer? debouncer;
 
   bool hasSearchEntry = false;
 
@@ -43,7 +43,7 @@ class SearchInputState extends State<SearchInput> {
     }
 
     if (this.debouncer?.isActive ?? false) {
-      this.debouncer.cancel();
+      this.debouncer!.cancel();
     }
 
     this.debouncer = Timer(Duration(milliseconds: 500), () {
@@ -61,7 +61,7 @@ class SearchInputState extends State<SearchInput> {
           SizedBox(width: 8),
           Expanded(
             child: TextField(
-              decoration: InputDecoration(hintText: "Search place", border: InputBorder.none),
+              decoration: InputDecoration(hintText: "Buscar ubicación", border: InputBorder.none),
               controller: this.editController,
               onChanged: (value) {
                 setState(() {
