@@ -25,7 +25,7 @@ class PlacePicker extends StatefulWidget {
   /// Location to be displayed when screen is showed. If this is set or not null, the
   /// map does not pan to the user's current location.
   final LatLng? displayLocation;
-  late final LocalizationItem? localizationItem;
+  late LocalizationItem? localizationItem;
 
   PlacePicker(this.apiKey, {this.displayLocation, this.localizationItem}) {
     if (this.localizationItem == null) {
