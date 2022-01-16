@@ -94,11 +94,14 @@ class PlacePickerState extends State<PlacePicker> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         key: this.appBarKey,
         title: SearchInput(searchPlace),
         centerTitle: true,
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
       ),
       body: Column(
         children: <Widget>[
